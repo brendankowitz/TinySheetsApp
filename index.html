@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TinySheets Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="HandHeldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-startup-image" href="Content/apple-splash.png" />
+    <link rel="apple-touch-icon" href="Content/apple-touch.png" />
+    <link rel="apple-touch-startup-image" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" href="Content/apple-splash-1024x748.png" />
+    <link rel="apple-touch-startup-image" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" href="Content/apple-splash-748x1004.png" />
+    <link rel="apple-touch-startup-image" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)" href="Content/apple-splash-retina.png" />
+    <link href="Content/apple-touch.png" rel="shortcut icon" type="image/x-icon" />
+    <script src="Scripts/require-jquery.js" data-main="main" type="text/javascript"></script>
+    <link href="Content/jquery.mobile.structure-1.1.0.min.css" rel="stylesheet" />
+    <link href="Content/jquery.mobile-1.1.0.min.css" rel="stylesheet" title="default" />
+    <link rel="alternate stylesheet" type="text/css" href="Content/metro/jquery.mobile.metro.theme.css" title="metro" />
+    <style>
+        [data-role='page'], [data-role='dialog']
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="index-page" data-url="" data-role="page" data-theme="a">
+        <div data-role="header">
+            <h1>Welcome to Tiny Timesheets</h1>
+        </div>
+        <div data-role="content">
+            <div style="text-align: center">
+                <img src="Content/clock.png" /></div>
+
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Navigation</li>
+                <li><a href="#time-sheets-page" data-transition="turn">Pending Timesheets</a></li>
+                <li><a href="#maps-page" data-transition="turn">Where am I today?</a></li>
+                <li><a href="#about-page" data-transition="turn">About</a></li>
+                <li><a href="/" data-transition="turn">Full site</a></li>
+            </ul>
+            <p>Welcome to Tiny Timesheets.</p>
+        </div>
+    </div>
+    <div id="offline-page" data-url="offline" data-role="page" data-theme="a">
+        <div data-role="header">
+            <h1>Offline</h1>
+        </div>
+        <div data-role="content">
+            <h3>You are Offline</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Navigation</li>
+                <li><a href="#index-page" data-transition="turn">Try again</a></li>
+            </ul>
+            <p>Looks like you're now offline. Please check that you have a data connection and try again</p>
+        </div>
+    </div>
+    <div id="about-page" data-url="about" data-role="page" data-theme="a">
+        <div data-role="header">
+            <a href="#index-page" data-role="button" data-icon="back" data-action="cancel" data-direction="reverse">Back</a>
+            <h1>About</h1>
+        </div>
+        <div data-role="content">
+            <h3>About TinySheets</h3>
+            <p>TinySheets v1.0</p>
+            <p>The portable way to track timesheets using HTML5, CSS and Javascript.</p>
+        </div>
+    </div>
+</body>
+</html>

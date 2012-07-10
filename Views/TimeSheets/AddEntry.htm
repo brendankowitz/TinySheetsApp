@@ -1,0 +1,51 @@
+﻿
+<div data-role="header">
+    <h1>Add Item</h1>
+    <a href="#" data-role="button" data-icon="back" data-action="cancel">Back</a> <a
+        href="#" data-role="button" data-icon="check" data-iconpos="right" data-action="submit">OK</a>
+</div>
+<div data-role="content">
+    <form>
+        <h2>Add Entry</h2>
+        <div id="edit-timesheet-item-message" style="display: none" class="field-validation-error"></div>
+        <div id="edit-timesheet-details-area">
+            
+        </div>
+    </form>
+    <script id="timesheet-entry-template" type="text/x-mustache-tmpl">
+        <input type="hidden" name="id" value="{{id}}" />
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                Description
+            </div>
+            <div class="ui-block-b">
+                <input type="text" name="Description" value="{{Description}}" required />
+            </div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                Hours
+            </div>
+            <div class="ui-block-b">
+                <input type="number" name="Hours" value="{{Hours}}" required />
+            </div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                Tags
+            </div>
+            <div class="ui-block-b">
+                <input type="text" name="Tags" />
+            </div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                Location
+            </div>
+            <div class="ui-block-b">
+                <input type="text" name="Location" />
+            </div>
+        </div>
+    
+    </script>  
+</div>

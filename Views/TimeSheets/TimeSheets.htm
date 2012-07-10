@@ -1,0 +1,40 @@
+﻿<div data-role="header">
+    <h1>Timesheets</h1>
+    <a href="#" data-role="button" data-icon="back" data-action="cancel">Back</a> <a
+        href="#" data-role="button" data-icon="plus" data-iconpos="right" data-action="new">Create</a>
+</div>
+<div data-role="content">
+    <form>
+        <h2>Timesheets</h2>
+        <div style="text-align: center">
+            <img src="" data-action="product-image" style="display: none; text-align: center" /></div>
+        <div id="edit-timesheet-item-message" style="display: none" class="field-validation-error">
+        </div>
+        <h3>Pending</h3>
+        <ul data-role="listview" id="pending-timesheet-table" data-inset="true" data-split-icon="check" data-split-theme="b"></ul>
+        
+        <h3>Completed</h3>
+        <ul data-role="listview" id="completed-timesheet-table" data-inset="true" data-split-theme="b"></ul>
+        <div class="listview-clearfix"></div> 
+    </form>
+    <script id="time-sheet-details-template" type="text/x-mustache-tmpl">
+        {{#Items}}
+        <li data-id="{{id}}" data-item-description="{{Description}}" data-item-hours="{{Hours}}">
+            {{^Submitted}}
+            <a href="#" data-action="edit">
+            {{/Submitted}}
+                <p class="ui-li-aside ui-li-desc">Hours: <strong>{{Hours}}</strong></p>
+               <h3 class="ui-li-heading-wrap">{{Description}}</h5>      
+            {{^Submitted}}
+            </a>
+            {{/Submitted}}
+            {{^Submitted}}
+            <a href="#" class="short" data-action="submit">Submit</a>
+            {{/Submitted}}
+        </li>
+        {{/Items}}
+        {{^Items}}
+            <li>No items.</li>
+        {{/Items}}
+    </script>  
+</div>
