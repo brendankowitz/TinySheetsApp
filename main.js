@@ -1,6 +1,5 @@
 
 require.config({
-    baseUrl: "/m",
     paths: {
         'model/Timesheet': 'Models/TimeSheet',
         'model/Tag': 'Models/Tag',
@@ -85,10 +84,6 @@ require(['jquery',
             });
             Spine.Route.setup();
 
-            //prefetch categories
-            var categoryClass = require("model/Tag");
-            categoryClass.fetch();
-            
             function setActiveStyleSheet(title) { //http://www.scottlogic.co.uk/blog/colin/2012/04/introducing-the-jquery-mobile-metro-theme/
                 var i, a, main;
                 for (i = 0; (a = document.getElementsByTagName("link")[i]) ; i++) {
