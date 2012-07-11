@@ -1,4 +1,4 @@
-﻿define("model/Timesheet", ['jquery', 'spine/Local'], function ($) {
+﻿define("model/Timesheet", ['jquery', 'spine/local'], function ($) {
 
     var model = Spine.Model.sub();
     model.configure("Timesheet", "id", "Description", "Hours", "Tags", "Location", "Submitted");

@@ -14,7 +14,8 @@ require.config({
         'jquery/mobile': 'Scripts/jquery.mobile-1.1.0',
         'hogan': 'Scripts/hogan-2.0.0',
         'text': 'Scripts/text',
-        'jquery/extensions': 'Scripts/_extensions'
+        'jquery/extensions': 'Scripts/_extensions',
+        'jquery': 'Scripts/jquery-1.7.2.min'
     },
     shim: {
         'jquery/mobile': ['jquery'],
@@ -84,6 +85,10 @@ require(['jquery',
             });
             Spine.Route.setup();
 
+            //prefetch categories
+            //var categoryClass = require("model/Tag");
+            //categoryClass.fetch();
+            
             function setActiveStyleSheet(title) { //http://www.scottlogic.co.uk/blog/colin/2012/04/introducing-the-jquery-mobile-metro-theme/
                 var i, a, main;
                 for (i = 0; (a = document.getElementsByTagName("link")[i]) ; i++) {
@@ -94,7 +99,7 @@ require(['jquery',
                 }
             }
             
-            var isWindowsPhone = navigator.userAgent.indexOf("Windows Phone OS 7.5") != -1;
+            var isWindowsPhone = navigator.userAgent.indexOf("MSIE") != -1;
             if (isWindowsPhone) {
                 setActiveStyleSheet("metro");
             }

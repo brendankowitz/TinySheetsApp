@@ -2854,3 +2854,7 @@ span.ui-slider-label-b {
     background-color: green;
     border: 2px solid black;
 }
+
+div.ui-header a[data-action='cancel'] {
+    display: none;
+}

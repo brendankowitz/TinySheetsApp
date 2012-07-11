@@ -1,4 +1,4 @@
-﻿define("TimeSheetsController", ['jquery', 'model/Timesheet', 'text!Views/TimeSheets/TimeSheets.htm'],
+﻿define("TimeSheetsController", ['jquery', 'model/Timesheet', 'hogan', 'text!Views/TimeSheets/TimeSheets.htm'],
     function ($, Timesheet) {
         var controller = Spine.Controller.create({
             elements: {
