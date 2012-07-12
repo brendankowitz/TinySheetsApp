@@ -128,7 +128,7 @@
 
     Route.change = function() {
       var path;
-      path = this.getFragment() !== '' ? this.getFragment() : this.getPath();
+      path = this.getFragment();
       if (path === this.path) {
         return;
       }

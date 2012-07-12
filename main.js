@@ -1,5 +1,6 @@
 
 require.config({
+    //baseUrl: "/m",
     paths: {
         'model/Timesheet': 'Models/TimeSheet',
         'model/Tag': 'Models/Tag',
