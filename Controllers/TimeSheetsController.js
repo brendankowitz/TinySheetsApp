@@ -1,4 +1,4 @@
-﻿define("TimeSheetsController", ['jquery', 'model/Timesheet', 'hogan', 'text!Views/TimeSheets/TimeSheets.htm'],
+﻿define("TimeSheetsController", ['jquery', 'model/Timesheet', 'text!Views/TimeSheets/TimeSheets.htm'],
     function ($, Timesheet) {
         var controller = Spine.Controller.create({
             elements: {
@@ -7,7 +7,7 @@
                 "#time-sheet-details-template": "itemTemplate"
             },
             events: {
-                "pagebeforeshow": "navigatedTo",
+                "pageshow": "navigatedTo",
                 "pagehide": "navigatedFrom",
                 "click a:jqmData(action='cancel')": "cancel",
                 "click a:jqmData(action='new')": "create",
@@ -81,8 +81,11 @@
 
             navigatedTo: function () {
                 this.render();
-                Timesheet.fetch();
                 this.active = true;
+                setTimeout(function () {
+                    Timesheet.fetch();
+                }, 10);
+                
             },
 
             navigatedFrom: function () {
