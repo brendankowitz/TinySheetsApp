@@ -5,17 +5,18 @@
 </div>
 <div data-role="content">
     <form>
-        <h2>Timesheets</h2>
-        <div style="text-align: center">
-            <img src="" data-action="product-image" style="display: none; text-align: center" /></div>
-        <div id="edit-timesheet-item-message" style="display: none" class="field-validation-error">
-        </div>
-        <h3>Pending</h3>
-        <ul data-role="listview" id="pending-timesheet-table" data-inset="true" data-split-icon="check" data-split-theme="b"></ul>
-        
-        <h3>Completed</h3>
-        <ul data-role="listview" id="completed-timesheet-table" data-inset="true" data-split-theme="b"></ul>
-        <div class="listview-clearfix"></div> 
+    <h2>Timesheets</h2>
+    <div style="text-align: center">
+        <img src="" data-action="product-image" style="display: none; text-align: center" />
+    </div>
+    <div id="edit-timesheet-item-message" style="display: none" class="field-validation-error">
+    </div>
+    <h3>Pending</h3>
+    <ul data-role="listview" id="pending-timesheet-table" data-inset="true" data-split-icon="check" data-split-theme="b"></ul>
+
+    <h3>Completed</h3>
+    <ul data-role="listview" id="completed-timesheet-table" data-inset="true" data-split-theme="b"></ul>
+    <div class="listview-clearfix"></div>
     </form>
     <script id="time-sheet-details-template" type="text/x-mustache-tmpl">
         {{#Items}}
@@ -36,5 +37,14 @@
         {{^Items}}
             <li>No items.</li>
         {{/Items}}
-    </script>  
+    </script>
+</div>
+<div data-role="footer" data-id="footerNav" data-position="fixed">
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#index-page" data-icon="home">Home</a></li>
+            <li><a href="#time-sheets-page" data-icon="grid" class="ui-btn-active ui-state-persist">Manage Timesheets</a></li>
+            <li><a href="#about-page" data-icon="info">About</a></li>
+        </ul>
+    </div>
 </div>

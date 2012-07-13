@@ -19,18 +19,15 @@
     <link href="Content/jquery.mobile.structure-1.1.0.min.css" rel="stylesheet" />
     <link href="Content/jquery.mobile-1.1.0.min.css" rel="stylesheet" title="default" />
     <link rel="alternate stylesheet" type="text/css" href="Content/metro/jquery.mobile.metro.theme.css" title="metro" />
-
+    <link rel="stylesheet" type="text/css" href="Content/andriod/android-theme.css" />
     <style>
-        [data-role='page'], [data-role='dialog']
-        {
-            display: none;
-        }
+        [data-role='page'], [data-role='dialog'] { display: none; }
     </style>
 </head>
 <body>
     <div id="index-page" data-url="" data-role="page" data-theme="a">
         <div data-role="header">
-            <h1>Welcome to Tiny Timesheets</h1>
+            <h1>Tiny Timesheets</h1>
         </div>
         <div data-role="content">
             <div style="text-align: center">
@@ -43,6 +40,15 @@
                 <li><a href="#about-page" data-transition="turn">About</a></li>
             </ul>
             <p>Welcome to Tiny Timesheets.</p>
+        </div>
+        <div data-role="footer" data-id="footerNav" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#index-page" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#time-sheets-page" data-icon="grid">Manage Timesheets</a></li>
+                    <li><a href="#about-page" data-icon="info">About</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div id="offline-page" data-url="offline" data-role="page" data-theme="a">
@@ -57,6 +63,15 @@
             </ul>
             <p>Looks like you're now offline. Please check that you have a data connection and try again</p>
         </div>
+        <div data-role="footer" data-id="footerNav" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#index-page" data-icon="home">Home</a></li>
+                    <li><a href="#time-sheets-page" data-icon="grid">Manage Timesheets</a></li>
+                    <li><a href="#about-page" data-icon="info">About</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div id="about-page" data-url="about" data-role="page" data-theme="a">
         <div data-role="header">
@@ -67,6 +82,16 @@
             <h3>About TinySheets</h3>
             <p>TinySheets v1.0</p>
             <p>The portable way to track timesheets using HTML5, CSS and Javascript.</p>
+        </div>
+
+        <div data-role="footer" data-id="footerNav" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#index-page" data-icon="home">Home</a></li>
+                    <li><a href="#time-sheets-page" data-icon="grid">Manage Timesheets</a></li>
+                    <li><a href="#about-page" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

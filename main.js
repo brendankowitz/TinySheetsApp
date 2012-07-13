@@ -104,6 +104,28 @@ require(['jquery',
             if (isWindowsPhone) {
                 setActiveStyleSheet("metro");
             }
+            var isAndriod = navigator.userAgent.toLowerCase().indexOf("android") != -1;
+            if (isAndriod) {
+                // add android class to body
+                $('body').addClass('android');
+                //move toolbars to top
+                //$('[data-role="navbar"]').each(function (i, type) {
+                //    var parent = $(type).parents('[data-role="page"]');
+                //    $(type).remove();
+                //    var navBar = parent.find('[data-role="header"]');
+                //    navBar.append(type);
+               
+                //    });
+            }
+
+            //reset toolbar status
+            $('[data-role="navbar"]').on("click", "a", function () {
+                var clicked = $(this);
+                var previous = $(clicked).attr("class");
+                setTimeout(function() {
+                    clicked.attr("class", previous);
+                }, 10);
+            });
 
             if ($("html").is(".ui-mobile") === false) {
                 location.reload(true); //? sometimes jquery mobile doesn't finish initializing...

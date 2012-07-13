@@ -1,17 +1,5 @@
 ﻿(function ($) {
     $.fn.extend({
-        disable: function (disable) {
-            ///<summary>Disable or re-enable a control and child controls</summary>
-            var $this = $(this);
-            if (disable) {
-                $this.attr("disabled", "disabled");
-                $this.find('*').attr("disabled", "disabled");
-            } else {
-                $this.removeAttr("disabled");
-                $this.find('*').removeAttr("disabled");
-            }
-        },
-
         current: function () {
             ///<summary>Reruns the selector and returns a current result set</summary>
             return $(this.selector);
